@@ -23,13 +23,22 @@ class MainContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Text('Hola mundo'),
-        Text('Hola mundo'),
-        Text('Hola mundo'),
-        Text('Hola mundo'),
-      ],
+    final textStyle = TextStyle(fontSize:50, fontWeight: FontWeight.bold, color: Colors.white);
+    return SafeArea(
+      bottom: false,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          SizedBox(height: 40,),
+          Text('11°', style: textStyle),
+          Text('Miercoles',style: textStyle),
+          //TODO:expanded
+          Expanded(child: Container()),
+    
+          Icon( Icons.keyboard_arrow_down, size: 100,color: Colors.white)
+        ],
+      ),
     );
   }
 }
